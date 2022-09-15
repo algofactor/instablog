@@ -8,6 +8,7 @@
 	width: 100%;
 	padding: 1rem;
 	background-color: var(--black);
+	border-top: 1px solid var(--darkGrey);
 }
 .mobile__nav__links {
 	display: flex;
@@ -35,7 +36,7 @@
 		width: 240px;
 		position: relative;
 		background-color: var(--black);
-		border: 1px solid var(--black);
+		border-right: 1px solid var(--darkGrey);
 		height: 100vh;
 	}
 	.navbar__container {

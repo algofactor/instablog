@@ -4,6 +4,7 @@
 	--black: #000;
 	/* --black: #262626; */
 	--darkGrey: rgb(219, 219, 219);
+	--grey: rgb(58, 58, 58);
 }
 
 * {
@@ -23,11 +24,15 @@
 	height: 100vh;
 }
 
+.main__content__container {
+	background-color: var(--black);
+	/* background-color: var(--lightGrey); */
+}
+
 .main__content {
 	width: 100%;
 	padding: 1rem 0;
-	background-color: var(--lightGrey);
-	height: 100vh;
+	height: calc(100vh - 70px);
 }
 
 @media screen and (min-width: 1024px) {
@@ -35,5 +40,6 @@
 		width: calc(100vw - 230px);
 		margin-left: auto;
 		padding: 2rem;
+		height: 100vh;
 	}
 }
