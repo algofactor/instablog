@@ -40,5 +40,6 @@
 		width: calc(100vw - 230px);
 		margin-left: auto;
 		padding: 2rem;
+		overflow: hidden;
 	}
 }
