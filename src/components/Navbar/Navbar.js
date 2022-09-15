@@ -1,7 +1,5 @@
 import React from "react";
 import "./Navbar.css";
-import { HiHome } from "react-icons/hi";
-import { FiLogIn, FiLogOut } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
 import {MdLogin, MdLogout, MdPostAdd} from 'react-icons/md'
 import { Link } from "react-router-dom";
