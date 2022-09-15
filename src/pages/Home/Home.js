@@ -10,14 +10,17 @@ const Home = () => {
 					<div className='homeTitleContainer'>
 						<h4 className='homeTitle'>Instablog</h4>
 					</div>
-					<div className='postCard'>
-						<div className='authorContainer'>
-							<div className='imageContainer'>
-								<img src={Avatar} alt='Avatar' className='profileImage' />
+					<div className='postCardContainer'>
+						<div className='postCard'>
+							<div className='authorContainer'>
+								<div className='imageContainer'>
+									<img src={Avatar} alt='Avatar' className='profileImage' />
+								</div>
+								<div className='postAuthor'>@Google</div>
 							</div>
-							<div className='postAuthor'>@Google</div>
+							<div className='postTitle'>Welcome</div>
+							<div className='post'>Yooo whats up peeps </div>
 						</div>
-						<div className='post'>Yooo whats up peeps!</div>
 					</div>
 				</div>
 			</div>

@@ -17,7 +17,7 @@ const CreatePost = () => {
 								<input
 									type='text'
 									id='title'
-									placeholder=' E.g. My first post'
+									placeholder=' E.g. My first post (Optional)'
 								/>
 							</div>
 							<div className='inputContainer'>
