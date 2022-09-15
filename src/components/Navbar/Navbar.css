@@ -6,7 +6,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	padding: 1rem;
+	padding: .5rem 1rem;
 	background-color: var(--black);
 	border-top: 1px solid var(--darkGrey);
 }
@@ -29,7 +29,7 @@
 	margin: 0 auto;
 }
 .mobile__nav__link__icon {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	color: var(--white);
 }
 

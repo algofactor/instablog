@@ -32,7 +32,7 @@
 .main__content {
 	width: 100%;
 	padding: 1rem 0;
-	height: calc(100vh - 70px);
+	height: 100vh
 }
 
 @media screen and (min-width: 1024px) {
@@ -40,6 +40,5 @@
 		width: calc(100vw - 230px);
 		margin-left: auto;
 		padding: 2rem;
-		height: 100vh;
 	}
 }

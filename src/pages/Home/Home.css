@@ -5,7 +5,7 @@
 	width: 95%;
 	overflow: hidden;
 	margin: auto;
-	height: 100%;
+	height: calc(100% - 50px);
 	position: relative;
 }
 
@@ -21,7 +21,7 @@
 
 .postCard {
 	border-bottom: 1px solid var(--grey);
-	padding: 1rem;
+	padding: .7rem 1rem;
 }
 .topCardContainer{
 	display: flex;
@@ -61,7 +61,7 @@
 }
 .postTitle {
 	text-transform: capitalize;
-	width: 80%;
+	width: 100%;
 	/* font-family: Cookie, cursive;
 	font-size: 2rem; */
 }
@@ -83,8 +83,12 @@
 		width: 70%;
 		max-width: 800px;
 		margin: auto;
+		height: 100%;
 	}
 	.homeTitle {
 		font-size: 3rem;
+	}
+	.postTitle {
+		width: 80%;
 	}
 }
