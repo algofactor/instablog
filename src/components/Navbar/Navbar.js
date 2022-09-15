@@ -2,7 +2,8 @@ import React from "react";
 import "./Navbar.css";
 import { HiHome } from "react-icons/hi";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
-import {MdPostAdd} from 'react-icons/md'
+import { GoHome } from "react-icons/go";
+import {MdLogin, MdLogout, MdPostAdd} from 'react-icons/md'
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -18,13 +19,13 @@ const Navbar = () => {
 					<div className='nav__links'>
 						<Link to='/' className='nav__link__container'>
 							<span className='nav__link__icon'>
-								<HiHome />
+								<GoHome />
 							</span>
 							<span className='nav__link'>Home</span>
 						</Link>
 						<Link to='/login' className='nav__link__container'>
 							<span className='nav__link__icon'>
-								<FiLogIn />
+								<MdLogin />
 							</span>
 							<span className='nav__link'>Login</span>
 						</Link>
@@ -36,7 +37,7 @@ const Navbar = () => {
 						</Link>
 						<div className='nav__link__container'>
 							<span className='nav__link__icon'>
-								<FiLogOut />
+								<MdLogout />
 							</span>
 							<span className='nav__link'>Logout</span>
 						</div>
@@ -47,12 +48,12 @@ const Navbar = () => {
 				<div className='mobile__nav__links'>
 					<Link to='/' className='mobile__nav__link__container'>
 						<span className='mobile__nav__link__icon'>
-							<HiHome />
+							<GoHome />
 						</span>
 					</Link>
 					<Link to='/login' className='mobile__nav__link__container'>
 						<span className='mobile__nav__link__icon'>
-							<FiLogIn />
+							<MdLogin />
 						</span>
 					</Link>
 					<Link to='/createPost' className='mobile__nav__link__container'>
@@ -62,7 +63,7 @@ const Navbar = () => {
 					</Link>
 					<div className='mobile__nav__link__container'>
 						<span className='mobile__nav__link__icon'>
-							<FiLogOut />
+							<MdLogout />
 						</span>
 					</div>
 				</div>
