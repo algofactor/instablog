@@ -10,6 +10,18 @@
 	background-color: var(--black);
 	border-top: 1px solid var(--darkGrey);
 }
+.mobile__nav__link__container {
+	background-color: transparent;
+	padding: 0.2rem 0.4rem;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+.mobile__nav__link__container:hover {
+	background-color: var(--white);
+}
+.mobile__nav__link__container:hover .mobile__nav__link__icon {
+	color: var(--black);
+}
 .mobile__nav__links {
 	display: flex;
 	justify-content: space-between;
@@ -43,15 +55,22 @@
 		padding: 2rem 0 2rem 1.5rem;
 		overflow: hidden;
 		overflow-y: auto;
+		width: 100%;
 	}
 	.nav__title__container {
 		margin-bottom: 3rem;
+		transition: all 0.3s ease;
 	}
 	.nav__title {
 		text-decoration: none;
 		font-family: "Cookie", cursive;
 		color: var(--white);
 		font-size: 2rem;
+		padding: 0.5rem 1rem;
+		transition: all 0.3s ease;
+	}
+	.nav__title:hover {
+		font-size: 2.3rem;
 	}
 	.nav__links {
 		margin-bottom: 3rem;
@@ -59,10 +78,18 @@
 	.nav__link__container {
 		display: flex;
 		align-items: center;
+		width: 60%;
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
 		margin-bottom: 2rem;
 		color: var(--white);
 		text-decoration: none;
 		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.nav__link__container:hover {
+		color: var(--black);
+		background-color: var(--darkGrey);
 	}
 	.nav__link__icon {
 		font-size: 1.8rem;

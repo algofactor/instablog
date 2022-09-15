@@ -23,6 +23,10 @@
 	border-bottom: 1px solid var(--grey);
 	padding: 1rem;
 }
+.topCardContainer{
+	display: flex;
+	justify-content: space-between;
+}
 .authorContainer {
 	display: flex;
 	align-items: center;
@@ -42,13 +46,21 @@
 .postAuthor {
 	font-size: 90%;
 }
+.trashIcon{
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.trashIcon:hover{
+	color: red;
+	font-size: 1.1rem;
+}
 
 .post {
 	font-size: 80%;
 	margin-top: 0.5rem;
 }
 .postTitle {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	width: 80%;
 	/* font-family: Cookie, cursive;
 	font-size: 2rem; */

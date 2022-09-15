@@ -23,7 +23,7 @@ const CreatePost = () => {
 							<div className='inputContainer'>
 								<label htmlFor='post'>Post:</label>
 								<textarea
-									placeholder="E.g This is my first post. I'm so excited!!"
+									placeholder="E.g This is my first post. I'm so excited!! 😁"
 									id='post'></textarea>
 							</div>
 							<div className='cardButtonContainer'>

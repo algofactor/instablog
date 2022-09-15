@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Avatar from "../../assets/images/google-logo.png";
+import {FaTrashAlt} from 'react-icons/fa'
 
 const Home = () => {
 	return (
@@ -12,13 +13,16 @@ const Home = () => {
 					</div>
 					<div className='postCardContainer'>
 						<div className='postCard'>
-							<div className='authorContainer'>
-								<div className='imageContainer'>
-									<img src={Avatar} alt='Avatar' className='profileImage' />
+							<div className='topCardContainer'>
+								<div className='authorContainer'>
+									<div className='imageContainer'>
+										<img src={Avatar} alt='Avatar' className='profileImage' />
+									</div>
+									<div className='postAuthor'>@Google</div>
 								</div>
-								<div className='postAuthor'>@Google</div>
+								<div className='trashIcon'><FaTrashAlt /></div>
 							</div>
-							<div className='postTitle'>Welcome</div>
+							<div className='postTitle'>Welcome to the festival of life.</div>
 							<div className='post'>Yooo whats up peeps </div>
 						</div>
 					</div>
