@@ -1,12 +1,13 @@
 .home {
 	color: var(--white);
-    background-color: var(--black);
+	background-color: var(--black);
 	border: 1px solid var(--grey);
 	overflow: hidden;
 	overflow-y: auto;
 	width: 95%;
 	margin: auto;
 	height: 100%;
+	position: relative;
 }
 
 .home::-webkit-scrollbar {
@@ -41,10 +42,25 @@
 	margin: auto;
 }
 
+.homeTitleContainer {
+	display: flex;
+	justify-content: center;
+	padding: .3rem;
+	border-bottom: 1px solid var(--grey);
+}
+.homeTitle {
+	color: var(--white);
+	font-family: "Cookie", cursive;
+	font-size: 2rem;
+}
+
 @media screen and (min-width: 768px) {
 	.home {
 		width: 70%;
 		max-width: 800px;
 		margin: auto;
+	}
+	.homeTitle {
+		font-size: 3rem;
 	}
 }
