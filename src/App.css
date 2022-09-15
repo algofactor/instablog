@@ -32,7 +32,8 @@
 .main__content {
 	width: 100%;
 	padding: 1rem 0;
-	height: 100vh
+	height: 100vh;
+	overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {
@@ -40,6 +41,5 @@
 		width: calc(100vw - 230px);
 		margin-left: auto;
 		padding: 2rem;
-		overflow: hidden;
 	}
 }
