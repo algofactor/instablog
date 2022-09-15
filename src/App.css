@@ -27,13 +27,16 @@
 .main__content__container {
 	background-color: var(--black);
 	/* background-color: var(--lightGrey); */
+	position: relative;
+	z-index: -2;
 }
 
 .main__content {
 	width: 100%;
 	padding: 1rem 0;
 	height: 100vh;
-	overflow: hidden;
+	position: relative;
+	z-index: -1;
 }
 
 @media screen and (min-width: 1024px) {

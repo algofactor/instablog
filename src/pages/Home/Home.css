@@ -4,9 +4,11 @@
 	border: 1px solid var(--grey);
 	width: 95%;
 	overflow: hidden;
-	margin: auto;
-	height: calc(100% - 50px);
+	margin: 0 auto;
+	height: calc(100vh - 80px);
 	position: relative;
+	top: 0;
+	z-index: 1;
 }
 
 .postCardContainer::-webkit-scrollbar {

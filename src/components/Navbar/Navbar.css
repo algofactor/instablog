@@ -1,6 +1,6 @@
 .navbar {
 	display: none;
-	z-index: 20;
+	z-index: 2;
 }
 .mobile__navbar {
 	position: fixed;
@@ -10,7 +10,7 @@
 	padding: .5rem 1rem;
 	background-color: var(--black);
 	border-top: 1px solid var(--darkGrey);
-	z-index: 20;
+	z-index: 2;
 }
 .mobile__nav__link__container {
 	background-color: transparent;
