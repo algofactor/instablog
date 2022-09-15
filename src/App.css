@@ -1,8 +1,9 @@
-:root{
-  --lightGrey: #FAFAFA;
-  --white: #FFFFFF;
-  --black: #262626;
-  --darkGrey: rgb( 219, 219, 219);
+:root {
+	--lightGrey: #fafafa;
+	--white: #ffffff;
+	--black: #000;
+	/* --black: #262626; */
+	--darkGrey: rgb(219, 219, 219);
 }
 
 * {
@@ -14,17 +15,25 @@
 	font-weight: 400;
 }
 
-.navbar__page{
+.navbar__page {
 	position: fixed;
 	top: 0;
 	left: 0;
+	bottom: 0;
+	height: 100vh;
 }
 
-.main__content{
-	width: calc(100vw - 230px);
-	margin-left: auto;
-	padding: 2rem;
-	/* position: relative; */
+.main__content {
+	width: 100%;
+	padding: 2rem 0;
 	background-color: var(--lightGrey);
 	height: 100vh;
+}
+
+@media screen and (min-width: 1024px) {
+	.main__content {
+		width: calc(100vw - 230px);
+		margin-left: auto;
+		padding: 2rem;
+	}
 }
