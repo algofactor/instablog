@@ -1,7 +1,8 @@
 :root{
-  --light-grey: #FAFAFA;
+  --lightGrey: #FAFAFA;
   --white: #FFFFFF;
   --black: #262626;
+  --darkGrey: rgb( 219, 219, 219);
 }
 
 * {
@@ -10,4 +11,20 @@
 	box-sizing: border-box;
 	/* font-family: 'Cookie', cursive; */
 	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+}
+
+.navbar__page{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.main__content{
+	width: calc(100vw - 230px);
+	margin-left: auto;
+	padding: 2rem;
+	/* position: relative; */
+	background-color: var(--lightGrey);
+	height: 100vh;
 }
