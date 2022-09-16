@@ -9,12 +9,13 @@ import { AuthContext } from "../../config/authContext";
 
 const Navbar = () => {
 	const { isLogged, setIsLogged } = useContext(AuthContext);
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const signOutFromApp = async () => {
-		await signOut(auth);
-		localStorage.setItem("isLogged", false);
-		setIsLogged(false);
-		navigate('/login')
+		await signOut(auth).then((res) => {
+			localStorage.setItem("isLogged", false);
+			setIsLogged(false);
+			navigate("/login");
+		});
 	};
 	return (
 		<>

@@ -48,6 +48,11 @@
 .postAuthor {
 	font-size: 90%;
 }
+.postAuthorFull {
+	font-size: 80%;
+	margin-left: .5rem;
+	color: grey;
+}
 .trashIcon {
 	cursor: pointer;
 	transition: all 0.3s ease;

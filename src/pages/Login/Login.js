@@ -8,12 +8,13 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 	const { setIsLogged } = useContext(AuthContext);
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const loginWithGoogle = async () => {
-		await signInWithPopup(auth, provider);
-		localStorage.setItem('isLogged', true)
-		setIsLogged(true)
-		navigate('/')
+		await signInWithPopup(auth, provider).then((res) => {
+			localStorage.setItem("isLogged", true);
+			setIsLogged(true);
+			navigate("/");
+		});
 	};
 	return (
 		<div className='main__content__container'>
