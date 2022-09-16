@@ -23,16 +23,16 @@
 
 .postCard {
 	border-bottom: 1px solid var(--grey);
-	padding: .7rem 1rem;
+	padding: 0.7rem 1rem;
 }
-.topCardContainer{
+.topCardContainer {
 	display: flex;
 	justify-content: space-between;
 }
 .authorContainer {
 	display: flex;
 	align-items: center;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 .imageContainer {
 	width: 30px;
@@ -48,11 +48,11 @@
 .postAuthor {
 	font-size: 90%;
 }
-.trashIcon{
+.trashIcon {
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
-.trashIcon:hover{
+.trashIcon:hover {
 	color: red;
 	font-size: 1.1rem;
 }
@@ -64,8 +64,6 @@
 .postTitle {
 	text-transform: capitalize;
 	width: 100%;
-	/* font-family: Cookie, cursive;
-	font-size: 2rem; */
 }
 
 .homeTitleContainer {
@@ -76,7 +74,7 @@
 }
 .homeTitle {
 	color: var(--white);
-	font-family: "Cookie", cursive;
+	font-family: var(--cursiveFont);
 	font-size: 2rem;
 }
 

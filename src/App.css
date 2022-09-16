@@ -5,14 +5,14 @@
 	/* --black: #262626; */
 	--darkGrey: rgb(219, 219, 219);
 	--grey: rgb(58, 58, 58);
+	--cursiveFont: 'Cookie', cursive;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* font-family: 'Cookie', cursive; */
-	font-family: "Roboto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-weight: 400;
 }
 
@@ -22,21 +22,23 @@
 	left: 0;
 	bottom: 0;
 	height: 100vh;
+	z-index: 10;
+}
+
+.pages__container{
+	position: relative;
+	z-index: 2;
 }
 
 .main__content__container {
 	background-color: var(--black);
 	/* background-color: var(--lightGrey); */
-	position: relative;
-	z-index: -2;
 }
 
 .main__content {
 	width: 100%;
 	padding: 1rem 0;
 	height: 100vh;
-	position: relative;
-	z-index: -1;
 }
 
 @media screen and (min-width: 1024px) {

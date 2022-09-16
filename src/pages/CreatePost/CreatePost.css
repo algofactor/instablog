@@ -16,7 +16,7 @@
 	margin-bottom: 3rem;
 }
 .createPostCard h2 {
-	font-family: "Cookie", cursive;
+	font-family: var(--cursiveFont);
 	font-size: 3rem;
 }
 .createPostCard h4 {
@@ -35,7 +35,7 @@
 	letter-spacing: 1.5px;
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
-	font-family: "Cookie", cursive;
+	font-family: var(--cursiveFont);
 }
 .inputContainer input,
 .inputContainer textarea {
@@ -46,38 +46,38 @@
 	border-radius: 4px;
 	color: var(--black);
 	font-size: 90%;
-    line-height: 1.5;
+	line-height: 1.5;
 }
 .cardButtonContainer {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 .cardButton {
-    background-color: black;
-    color: var(--white);
-    padding: 0.7rem 2rem;
-    border-radius: 20px;
-    outline: none;
-    border: 1px solid var(--white);
-    cursor: pointer;
-    font-weight: 700;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+	background-color: black;
+	color: var(--white);
+	padding: 0.7rem 2rem;
+	border-radius: 20px;
+	outline: none;
+	border: 1px solid var(--white);
+	cursor: pointer;
+	font-weight: 700;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
 }
 .cardButton:hover {
-    background-color: var(--white);
-    color: var(--black);
+	background-color: var(--white);
+	color: var(--black);
 }
 @media screen and (min-width: 768px) {
-    .createPostCard {
+	.createPostCard {
 		width: 60%;
 	}
 }
 @media screen and (min-width: 1024px) {
 	.createPostCard {
 		width: 70%;
-        max-width: 700px;
+		max-width: 700px;
 	}
 	.createPostCard h2 {
 		font-size: 4rem;

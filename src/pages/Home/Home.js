@@ -25,6 +25,58 @@ const Home = () => {
 							<div className='postTitle'>Welcome to the festival of life.</div>
 							<div className='post'>Yooo whats up peeps </div>
 						</div>
+						<div className='postCard'>
+							<div className='topCardContainer'>
+								<div className='authorContainer'>
+									<div className='imageContainer'>
+										<img src={Avatar} alt='Avatar' className='profileImage' />
+									</div>
+									<div className='postAuthor'>@Google</div>
+								</div>
+								<div className='trashIcon'><FaTrashAlt /></div>
+							</div>
+							<div className='postTitle'>Welcome to the festival of life.</div>
+							<div className='post'>Yooo whats up peeps </div>
+						</div>
+						<div className='postCard'>
+							<div className='topCardContainer'>
+								<div className='authorContainer'>
+									<div className='imageContainer'>
+										<img src={Avatar} alt='Avatar' className='profileImage' />
+									</div>
+									<div className='postAuthor'>@Google</div>
+								</div>
+								<div className='trashIcon'><FaTrashAlt /></div>
+							</div>
+							<div className='postTitle'>Welcome to the festival of life.</div>
+							<div className='post'>Yooo whats up peeps </div>
+						</div>
+						<div className='postCard'>
+							<div className='topCardContainer'>
+								<div className='authorContainer'>
+									<div className='imageContainer'>
+										<img src={Avatar} alt='Avatar' className='profileImage' />
+									</div>
+									<div className='postAuthor'>@Google</div>
+								</div>
+								<div className='trashIcon'><FaTrashAlt /></div>
+							</div>
+							<div className='postTitle'>Welcome to the festival of life.</div>
+							<div className='post'>Yooo whats up peeps </div>
+						</div>
+						<div className='postCard'>
+							<div className='topCardContainer'>
+								<div className='authorContainer'>
+									<div className='imageContainer'>
+										<img src={Avatar} alt='Avatar' className='profileImage' />
+									</div>
+									<div className='postAuthor'>@Google</div>
+								</div>
+								<div className='trashIcon'><FaTrashAlt /></div>
+							</div>
+							<div className='postTitle'>Welcome to the festival of life.</div>
+							<div className='post'>Yooo whats up peeps </div>
+						</div>
 					</div>
 				</div>
 			</div>
