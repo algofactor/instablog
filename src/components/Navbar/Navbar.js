@@ -11,8 +11,8 @@ const Navbar = () => {
 	const { isLogged, setIsLogged } = useContext(AuthContext);
 	const navigate = useNavigate();
 	const signOutFromApp = async () => {
-		await signOut(auth).then((res) => {
-			localStorage.setItem("isLogged", false);
+		await signOut(auth).then(() => {
+			localStorage.clear();
 			setIsLogged(false);
 			navigate("/login");
 		});

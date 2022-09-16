@@ -12,6 +12,7 @@
 }
 .mobile__nav__link__container {
 	background-color: transparent;
+	cursor: pointer;
 	padding: 0.2rem 0.4rem;
 	border-radius: 10px;
 	transition: all 0.3s ease;

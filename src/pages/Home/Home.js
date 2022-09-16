@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
-import Avatar from "../../assets/images/google-logo.png";
+import Avatar from "../../assets/images/user.png";
 import { FaTrashAlt } from "react-icons/fa";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../config/firebaseConfig";
+import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { auth, db } from "../../config/firebaseConfig";
+import { AuthContext } from "../../config/authContext";
 
 const Home = () => {
+	const { isLogged } = useContext(AuthContext);
 	const [postList, setPostList] = useState([]);
 	const postsRef = collection(db, "posts");
 	useEffect(() => {
@@ -15,7 +17,13 @@ const Home = () => {
 			});
 		};
 		getPosts();
+		// console.log(auth.currentUser.photoURL)
 	});
+
+	const deletePost = async (id) => {
+		const docs = doc(db, "posts", id);
+		await deleteDoc(docs);
+	};
 
 	return (
 		<div className='main__content__container'>
@@ -37,7 +45,9 @@ const Home = () => {
 										<div className='authorContainer'>
 											<div className='imageContainer'>
 												<img
-													src={Avatar}
+													src={
+														post.author.profile ? post.author.profile : Avatar
+													}
 													alt='Avatar'
 													className='profileImage'
 												/>
@@ -45,9 +55,13 @@ const Home = () => {
 											<div className='postAuthor'>@{username}</div>
 											<div className='postAuthorFull'>{post.author.name}</div>
 										</div>
-										<div className='trashIcon'>
-											<FaTrashAlt />
-										</div>
+										{isLogged && post.author.id === auth.currentUser.uid && (
+											<div
+												className='trashIcon'
+												onClick={deletePost(post.author.id)}>
+												<FaTrashAlt />
+											</div>
+										)}
 									</div>
 									<div className='postTitle'>{post.title}</div>
 									<div className='post'>{post.post} </div>

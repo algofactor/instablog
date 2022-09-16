@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 export const AuthContext = createContext();
 
 const AuthContextWrapper = ({children}) => {
-	const [isLogged, setIsLogged] = useState(false);
+	const [isLogged, setIsLogged] = useState(localStorage.getItem('isLogged'));
 	const authValues = {
 		isLogged,
 		setIsLogged,

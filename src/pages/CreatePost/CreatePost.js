@@ -20,7 +20,7 @@ const CreatePost = () => {
 		await addDoc(postRef, {
 			title,
 			post,
-			author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+			author: { name: auth.currentUser.displayName, id: auth.currentUser.uid, profile: auth.currentUser.photoURL },
 		});
 		navigate('/')
 	};

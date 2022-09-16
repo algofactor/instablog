@@ -15,7 +15,18 @@ const Login = () => {
 			setIsLogged(true);
 			navigate("/");
 		});
+
+		// signInWithRedirect(auth, provider);
 	};
+	// useEffect(() => {
+	// 	if (auth.currentUser) {
+	// 		localStorage.setItem("isLogged", true);
+	// 		setIsLogged(true);
+	// 		navigate("/");
+	// 		console.log(auth.currentUser);
+	// 		console.log(isLogged);
+	// 	}
+	// });
 	return (
 		<div className='main__content__container'>
 			<div className='main__content'>
