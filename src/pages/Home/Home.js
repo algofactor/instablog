@@ -17,7 +17,7 @@ const Home = () => {
 			});
 		};
 		getPosts();
-	});
+	},[postsRef]);
 
 	const deletePost = async (id) => {
 		const docs = doc(db, "posts", id);

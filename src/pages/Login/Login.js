@@ -1,32 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Login.css";
 import GoogleLogo from "../../assets/images/google-logo.png";
 import { AuthContext } from "../../config/authContext";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithRedirect } from "firebase/auth";
 import { auth, provider } from "../../config/firebaseConfig";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-	const { setIsLogged } = useContext(AuthContext);
+	const { setIsLogged, user } = useContext(AuthContext);
 	const navigate = useNavigate();
 	const loginWithGoogle = async () => {
-		await signInWithPopup(auth, provider).then((res) => {
+		signInWithRedirect(auth, provider);
+	};
+	useEffect(() => {
+		if (user != null) {
+			navigate("/");
 			localStorage.setItem("isLogged", true);
 			setIsLogged(true);
-			navigate("/");
-		});
-
-		// signInWithRedirect(auth, provider);
-	};
-	// useEffect(() => {
-	// 	if (auth.currentUser) {
-	// 		localStorage.setItem("isLogged", true);
-	// 		setIsLogged(true);
-	// 		navigate("/");
-	// 		console.log(auth.currentUser);
-	// 		console.log(isLogged);
-	// 	}
-	// });
+		}
+	}, [user]);
 	return (
 		<div className='main__content__container'>
 			<div className='main__content'>
