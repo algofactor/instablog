@@ -17,7 +17,6 @@ const Home = () => {
 			});
 		};
 		getPosts();
-		// console.log(auth.currentUser.photoURL)
 	});
 
 	const deletePost = async (id) => {
@@ -59,7 +58,7 @@ const Home = () => {
 											{isLogged && post.author.id === auth.currentUser.uid && (
 												<div
 													className='trashIcon'
-													onClick={deletePost(post.author.id)}>
+													onClick={() => deletePost(post.id)}>
 													<FaTrashAlt />
 												</div>
 											)}
