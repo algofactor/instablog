@@ -34,40 +34,60 @@ const Home = () => {
 					</div>
 					<div className='postCardContainer'>
 						{/* Post Card */}
-						{postList.map((post, index) => {
-							let username =
-								post.author.name.split(" ")[0][0] +
-								"" +
-								post.author.name.split(" ")[1][0];
-							return (
-								<div className='postCard' key={index}>
-									<div className='topCardContainer'>
-										<div className='authorContainer'>
-											<div className='imageContainer'>
-												<img
-													src={
-														post.author.profile ? post.author.profile : Avatar
-													}
-													alt='Avatar'
-													className='profileImage'
-												/>
+						{postList.length > 0 ? (
+							postList.map((post, index) => {
+								let username =
+									post.author.name.split(" ")[0][0] +
+									"" +
+									post.author.name.split(" ")[1][0];
+								return (
+									<div className='postCard' key={index}>
+										<div className='topCardContainer'>
+											<div className='authorContainer'>
+												<div className='imageContainer'>
+													<img
+														src={
+															post.author.profile ? post.author.profile : Avatar
+														}
+														alt='Avatar'
+														className='profileImage'
+													/>
+												</div>
+												<div className='postAuthor'>@{username}</div>
+												<div className='postAuthorFull'>{post.author.name}</div>
 											</div>
-											<div className='postAuthor'>@{username}</div>
-											<div className='postAuthorFull'>{post.author.name}</div>
+											{isLogged && post.author.id === auth.currentUser.uid && (
+												<div
+													className='trashIcon'
+													onClick={deletePost(post.author.id)}>
+													<FaTrashAlt />
+												</div>
+											)}
 										</div>
-										{isLogged && post.author.id === auth.currentUser.uid && (
-											<div
-												className='trashIcon'
-												onClick={deletePost(post.author.id)}>
-												<FaTrashAlt />
-											</div>
-										)}
+										<div className='postTitle'>{post.title}</div>
+										<div className='post'>{post.post} </div>
 									</div>
-									<div className='postTitle'>{post.title}</div>
-									<div className='post'>{post.post} </div>
+								);
+							})
+						) : (
+							<div className='postCard'>
+								<div className='topCardContainer'>
+									<div className='authorContainer'>
+										<div className='imageContainer'>
+											<img
+												src={Avatar}
+												alt='Avatar'
+												className='profileImage'
+											/>
+										</div>
+										<div className='postAuthor'>@Username</div>
+										<div className='postAuthorFull'>Author's Name</div>
+									</div>
 								</div>
-							);
-						})}
+								<div className='postTitle'>Post Title</div>
+								<div className='post'>Post...</div>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
