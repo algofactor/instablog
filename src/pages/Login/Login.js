@@ -18,7 +18,7 @@ const Login = () => {
 			localStorage.setItem("isLogged", true);
 			setIsLogged(true);
 		}
-	}, [user]);
+	}, [user, navigate, setIsLogged]);
 	return (
 		<div className='main__content__container'>
 			<div className='main__content'>

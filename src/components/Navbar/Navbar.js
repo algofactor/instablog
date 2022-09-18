@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
 import { GoHome } from "react-icons/go";
 import { MdLogin, MdLogout, MdPostAdd } from "react-icons/md";
@@ -8,19 +8,15 @@ import { auth } from "../../config/firebaseConfig";
 import { AuthContext } from "../../config/authContext";
 
 const Navbar = () => {
-	const { isLogged, setIsLogged, user } = useContext(AuthContext);
+	const { isLogged, setIsLogged } = useContext(AuthContext);
 	const navigate = useNavigate();
 	const signOutFromApp = async () => {
 		await signOut(auth).then(() => {
 			localStorage.clear();
 			setIsLogged(false);
+			navigate('/login')	
 		});
 	};
-	useEffect(() => {
-		if(user == null){
-			navigate("/login");
-		}
-	}, [user])
 	
 	return (
 		<>
