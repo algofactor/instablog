@@ -7,7 +7,7 @@ import CreatePost from "./pages/CreatePost/CreatePost";
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/">
 			<div className='navbar__page'>
 				<Navbar />
 			</div>
