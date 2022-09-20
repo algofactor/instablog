@@ -55,7 +55,7 @@ const Home = () => {
 												<div className='postAuthor'>@{username}</div>
 												<div className='postAuthorFull'>{post.author.name}</div>
 											</div>
-											{isLogged && post.author.id === auth.currentUser.uid && (
+											{isLogged && post.author.id === auth.currentUser?.uid && (
 												<div
 													className='trashIcon'
 													onClick={() => deletePost(post.id)}>
